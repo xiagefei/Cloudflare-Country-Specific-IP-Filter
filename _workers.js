@@ -2211,7 +2211,7 @@ export default {
 </head>
 <body>
     <div class="login-card">
-        <h1>Cloudflare IP 收集器</h1>
+        <h1>Cloudflare IP 收集器 UI+</h1>
         <p>请输入管理员密码访问此页面</p>
         <input type="password" id="password" placeholder="输入管理员密码" onkeypress="if(event.key==='Enter') doLogin()">
         <button onclick="doLogin()" id="loginBtn">登录</button>
