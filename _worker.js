@@ -382,7 +382,7 @@ class="flex items-center gap-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-gray-
             toast.innerHTML = \`\${icon}<span>\${message}</span>\`;
             
             container.appendChild(toast);
-            lucide.createIcons(); // 重新渲染图标
+            lucide.createIcons();
 
             // 3秒后移除
             setTimeout(() => {
@@ -391,7 +391,7 @@ class="flex items-center gap-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-gray-
             }, 3000);
         }
         const slotAudio = new Audio("https://github.com/alienwaregf/CF-Custom-IPs-By-Country/raw/refs/heads/main/Audio/%E8%80%81%E8%99%8E%E6%9C%BA2%E7%A7%92.mp3");
-        slotAudio.preload = 'auto'; // 强制浏览器预加载
+        slotAudio.preload = 'auto';
         slotAudio.volume = 1;
 
         function getFlag(code) {
@@ -476,7 +476,6 @@ class="flex items-center gap-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-gray-
             const btn = document.querySelector('button[onclick="randomSelect()"]');
             const originalHtml = btn.innerHTML;
             
-            // 【修正1】这里把反引号改成了单引号
             btn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> 摇号中...';
             btn.disabled = true;
 
@@ -516,7 +515,6 @@ class="flex items-center gap-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-gray-
                 toggle(r);
             });
             
-            // 【修正2】这里改成了加号拼接，避免反引号冲突
             showToast('🎰 欧皇附体！随机选中了 ' + count + ' 个地区', 'success');
         }
         // 移动端点击切换菜单
@@ -538,7 +536,6 @@ class="flex items-center gap-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-gray-
             
             navigator.clipboard.writeText(url);
             
-            // 🔥 使用更友好的 Toast 提示
             let msg = \`【\${type}】订阅地址已复制到剪贴板\`;
             if(limit > 0) msg += \`\\n(已限制单地区最大 \${limit} 个节点)\`;
             
